@@ -1,78 +1,38 @@
-import { tw } from 'twind';
-import Particles from 'react-particles-js';
+import { tw, css } from 'twind/css';
 import Arrow from '@/constants/svg/arrow.svg';
 
-const ParticleBg = () => (
-  <Particles
-    params={{
-      particles: {
-        number: {
-          value: 400,
-          density: {
-            enable: true,
-            value_area: 3000,
-          },
-        },
-        line_linked: {
-          enable: false,
-        },
-        move: {
-          direction: `right`,
-          speed: 0.3,
-        },
-        size: {
-          value: 1,
-        },
-        opacity: {
-          anim: {
-            enable: true,
-            speed: 0.5,
-            opacity_min: 0.1,
-          },
-        },
-      },
-      interactivity: {
-        events: {
-          onclick: {
-            enable: false,
-          },
-        },
-      },
-      retina_detect: true,
-    }}
-  />
-);
+const sectionStyle = css`
+  background-color: #F5F5F7;
+`;
 
 const articles = [
   {
-    title: `Velit reprehenderit culpa Lorem reprehenderit excepteur ipsum esse.`,
+    title: `Text Analysis`,
+    body: `Key-phrase extraction, language detection and translation, spam filtering and sentiment analysis, allowing you to filter out the noise in your data and focus on what counts.`,
     image: `/images/case-1.webp`,
     alt: `Proident pariatur est.`,
   },
   {
-    title: `Velit reprehenderit culpa Lorem reprehenderit ipsum esse.`,
+    title: `Image Analysis`,
+    body: `Identify colours, emotions, objects, country of origin, and apply semiotics to aid interpretation of both conscious and unconscious signs and signifiers.`,
     image: `/images/case-2.webp`,
     alt: `Proident pariatur est.`,
   },
   {
-    title: `Velit reprehenderit culpa Lorem reprehenderit excepteur esse.`,
+    title: `Video Analysis`,
+    body: `Frame-by-frame image analytics, allowing you to measure nuanced emotional responses in viewers across time, from joy to sadness to fear.`,
     image: `/images/case-3.webp`,
     alt: `Proident pariatur est.`,
-  },
+  }
 ];
 
 const CasesSection = () => (
-  <section>
-    <div className={tw(`w-full min-h-screen bg-gray-900 relative`)}>
-      <div className={tw(`absolute left-0 top-0 h-screen w-full overflow-hidden`)}>
-        <ParticleBg />
+  <section className={tw(sectionStyle)}>
+    <div className={tw(`w-full py-20`)}>
+      <div className={tw(`w-full overflow-hidden`)}>
       </div>
-      <div className={tw(`max-w-7xl mx-4 lg:mx-auto pt-20 lg:pt-40`)}>
-        <h1 className={tw(`text-white text-4xl lg:text-7xl font-bold text-center`)}>What will you build?</h1>
-        <p className={tw(`text-white text-gray-400 text-center text-xl mt-12`)}>
-          Don’t just take our word for it — see what leaders in digital are saying
-        </p>
-        <div className={tw(`mx-auto pt-24`)}>
+      <div className={tw(`max-w-7xl mx-4 lg:mx-auto lg:pt-20`)}>
+        <div className={tw(`mx-auto`)}>
           <div className={tw(`w-full flex flex-wrap justify-around`)}>
             {articles.map((article) => (
               <div
@@ -82,7 +42,7 @@ const CasesSection = () => (
                       xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0 cursor-pointer hover:scale-105`,
                 )}
               >
-                <div className={tw(`h-64 z-20`)}>
+                <div className={tw(`h-250 z-20`)}>
                   <img
                     src={article.image}
                     alt={article.alt}
@@ -92,20 +52,11 @@ const CasesSection = () => (
                   />
                 </div>
                 <div className={tw(`p-4 shadow-lg w-full mx-auto -mt-8 bg-white rounded-b z-30 relative`)}>
-                  <p className={tw(`uppercase text-sm text-gray-700 text-center pb-1`)}>Case study</p>
-                  <p className={tw(`text-gray-500 text-center pb-1 text-sm`)}>{article.title}</p>
+                  <p className={tw(`uppercase text-sm text-purple-600 text-left pb-1`)}>{article.title}</p>
+                  <p className={tw(`text-gray-500 text-left pb-1 text-sm`)}>{article.body}</p>
                 </div>
               </div>
             ))}
-            <span
-              className={tw(
-                `-mt-8 pb-12 lg:mt-4 flex items-center text-xl
-                text-indigo-400 cursor-pointer z-30 hover:text-indigo-600`,
-              )}
-            >
-              See all case studies
-              <Arrow className={tw(`h-6 w-6 fill-current ml-2`)} />
-            </span>
           </div>
         </div>
       </div>

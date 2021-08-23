@@ -1,3 +1,21 @@
 @import "@fontsource/inter/400.css";
 @import "@fontsource/inter/500.css";
 @import "@fontsource/inter/700.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-dot-list-style {
+    position: relative !important;
+    flex-direction: column;
+    top: -250px;
+    left: -50px !important;
+    margin-bottom: -150px !important;
+}  
+  .custom-dot {
+    background-color: #B4B4B4;
+  }
+  .custom-dot--active {
+    background-color: indigo;
+  }
