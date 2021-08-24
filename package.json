@@ -27,6 +27,7 @@
     "@fontsource/inter": "4.2.1",
     "@svgr/webpack": "5.5.0",
     "embla-carousel": "4.5.3",
+    "frontmatter-markdown-loader": "3.6.3",
     "netlify-cms-app": "2.15.38",
     "next": "10.0.7",
     "next-seo": "4.20.0",

@@ -27,6 +27,28 @@ export default {
                 name: 'hero_description',
                 widget: 'markdown',
               },
+              {
+                label: 'Hero Image',
+                name: 'hero_image',
+                widget: 'image',
+              },
+            ],
+          },
+          {
+            label: 'About',
+            name: 'about',
+            file: 'content/pages/about.md',
+            fields: [
+              {
+                label: 'About',
+                name: 'about',
+                widget: 'string',
+              },
+              {
+                label: 'About Image',
+                name: 'about_image',
+                widget: 'image',
+              },
             ],
           },
         ],
