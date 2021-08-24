@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { tw, css } from 'twind/css';
+import { tw } from 'twind/css';
 import Carousel from 'react-multi-carousel';
+import { DotProps } from 'react-multi-carousel/lib/types';
 import 'react-multi-carousel/lib/styles.css';
 
 let CardsArray = [
@@ -49,28 +50,21 @@ const responsive = {
   },
 };
 
-
-const CustomDot = ({
-    index,
-    onClick,
-    active
-  }) => {
-    return (
-      <a
-        onClick={e => {
-          onClick();
-          e.preventDefault();
-        }}
-      >
-        <svg height="50">
-            <circle cx="10" cy="20" r="5" className={
-            active ? 'custom-dot--active' : 'custom-dot'}
-            fill={active ? 'blueviolet' : '#B4B4B4'}/>
-        </svg>
-      </a>
-    );
-  };
-
+const CustomDot = ({ onClick, active }: DotProps) => {
+  return (
+    <a onClick={() => onClick!()}>
+      <svg height="50">
+        <circle
+          cx="10"
+          cy="20"
+          r="5"
+          className={active ? 'custom-dot--active' : 'custom-dot'}
+          fill={active ? 'blueviolet' : '#B4B4B4'}
+        />
+      </svg>
+    </a>
+  );
+};
 
 const CarouselSection = () => (
   <section className={tw(`mx-auto max-w-6xl py-20 items-center`)}>

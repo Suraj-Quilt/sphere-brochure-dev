@@ -111,7 +111,7 @@ const Navigation = () => {
             <div className={tw(`ml-4 flex items-center md:ml-6`)}>
               {links.map((link: Link) =>
                 link.label === 'TRY SPHERE' ? (
-                  <Button className={tw(`text-white bg-purple-700 py-2 px-4`)}>{link.label}</Button>
+                  <button className={tw(`text-white bg-purple-700 py-2 px-4`)}>{link.label}</button>
                 ) : (
                   <a
                     key={`mobile-${link.label}`}

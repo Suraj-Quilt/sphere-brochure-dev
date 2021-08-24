@@ -2,11 +2,11 @@ export default {
     cms_manual_init: true,
     backend: {
       name: 'github',
-      repo: 'yourname/your-github-repo-name',
+      repo: 'Suraj-Quilt/sphere-brochure-dev',
       branch: 'main',
     },
-    media_folder: 'public',
-    public_folder: 'images',
+    media_folder: 'public/img',
+    public_folder: 'img',
     collections: [
       {
         name: 'pages',
