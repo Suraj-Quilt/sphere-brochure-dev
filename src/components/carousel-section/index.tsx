@@ -41,7 +41,6 @@ const CustomDot = ({ onClick, active }: DotProps) => {
 
 const CarouselSection = () => {
   let { benefits_list } = attributes;
-  console.log(benefits_list);
   return (
     <section className={tw(`mx-auto max-w-6xl py-20 items-center`)}>
       <h3 className={tw(`mb-12 font-sans font-medium text-xl md:text-xl lg:text-3xl text-left`)}>
