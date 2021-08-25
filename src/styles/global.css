@@ -9,9 +9,9 @@
 .custom-dot-list-style {
     position: relative !important;
     flex-direction: column;
-    top: -250px;
+    top: -350px;
     left: -50px !important;
-    margin-bottom: -150px !important;
+    margin-bottom: -250px !important;
 }  
   .custom-dot {
     background-color: #B4B4B4;
