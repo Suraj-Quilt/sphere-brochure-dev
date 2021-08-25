@@ -4,6 +4,7 @@ export default {
       name: 'github',
       repo: 'Suraj-Quilt/sphere-brochure-dev',
       branch: 'main',
+      auth_endpoint: 'auth'
     },
     media_folder: 'public/img',
     public_folder: 'img',
